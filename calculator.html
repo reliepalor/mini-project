@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="flex justify-center mt-2">
+        <div class="flex flex-col justify-center border border-black shadow-md rounded-[30px] w-[23.5rem] h-[42rem] bg-black mb-10">
+            <div class="flex flex-col mx-2 mb-2 rounded-xl space-y-2 ">
+                <div class="flex justify-center mt-[-20px]">
+                    <span class="text-gray-400 text-center bg-black border border-gray-600 rounded-xl w-1/3 hover:text-gray-200 duration-200 cursor-pointer hover:scale-105">Calculator</span>
+
+                </div>
+                <div class="h-[1vh] w-full rounded-xl"></div>
+                <input type="text" id="display" readonly class="w-full h-[12vh] text-6xl px-4 text-right font-semibold text-white bg-transparent">
+            </div>
+            <div class="text-center" id="keys">
+
+                <button onclick="clearDisplay('')" class="operatior-btn bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">C</button>
+                <button onclick="appendToDisplay(',')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">,</button>
+                <button onclick="appendToDisplay('%')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">%</button>
+                <button onclick="appendToDisplay('/')" class="operatior-btn bg-orange-500 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-orange-400 duration-100">÷</button>
+                <button onclick="appendToDisplay('7')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">7</button>
+                <button onclick="appendToDisplay('8')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">8</button>
+                <button onclick="appendToDisplay('9')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">9</button>
+                <button onclick="appendToDisplay('+')" class="operatior-btn bg-orange-500 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-orange-400 duration-100">+</button>
+                <button onclick="appendToDisplay('4')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">4</button>
+                <button onclick="appendToDisplay('5')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">5</button>
+                <button onclick="appendToDisplay('6')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">6</button>
+                <button onclick="appendToDisplay('*')" class="operatior-btn bg-orange-500 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-orange-400 duration-100">x</button>
+                <button onclick="appendToDisplay('1')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">1</button>
+                <button onclick="appendToDisplay('2')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">2</button>
+                <button onclick="appendToDisplay('3')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">3</button>
+                <button onclick="appendToDisplay('-')" class="operatior-btn bg-orange-500 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-orange-400 duration-100">-</button>
+                <button onclick="appendToDisplay('0')" class="bg-gray-600 px-6 w-[10rem] h-[5rem] rounded-[50px] text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1 text-left items-start justify-left">0</button>
+                <button onclick="appendToDisplay('.')" class="bg-gray-600 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-gray-500 duration-100 mx-1">.</button>
+
+                <button onclick="calculate('')" class="bg-orange-500 p-2 w-[5rem] h-[5rem] rounded-full text-white text-4xl font-semibold cursor-pointer mb-2 hover:bg-orange-400 duration-100 mx-1">=</button>
+                <div class="flex justify-center mt-10">
+                    <div class="rounded-xl bg-white w-[10rem] h-[4px] flex justify-center items-center"></div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="calculator.js"></script>
+</html>
